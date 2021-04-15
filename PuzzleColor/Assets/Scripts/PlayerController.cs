@@ -32,5 +32,6 @@ public class PlayerController : MonoBehaviour
     {
         //rb.MovePosition(rb.position + dir * 10 * Time.fixedDeltaTime);
         rb.velocity = dir * 10;
+        rb.AddForce(0,-10f,0,ForceMode.Impulse);
     }
 }

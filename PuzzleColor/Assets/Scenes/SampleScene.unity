@@ -4934,7 +4934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7622743331882760578, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.46
+      value: 2.81
       objectReference: {fileID: 0}
     - target: {fileID: 7622743331882760578, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4971,6 +4971,26 @@ PrefabInstance:
     - target: {fileID: 7622743331882760584, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622743331882760590, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622743331882760590, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622743331882760590, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622743331882760590, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622743331882760590, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
