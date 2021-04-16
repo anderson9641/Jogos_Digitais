@@ -11,14 +11,15 @@ public class SystemColor : MonoBehaviour
  
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag.Equals("CuboAzul"))
+        if (CurrentColor.Equals("Branco") && other.tag.Equals("CuboAzul"))
         {
             Color cor = cores[1];
             sprite.GetComponent<Renderer>().material.color = cor;
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             CurrentColor = "Azul";
 
-        }else if (other.tag.Equals("CuboAmarelo"))
+        }else if (CurrentColor.Equals("Branco") && other.tag.Equals("CuboAmarelo"))
         {
             Color cor = cores[0];
             sprite.GetComponent<Renderer>().material.color = cor;
@@ -26,12 +27,72 @@ public class SystemColor : MonoBehaviour
             //Destroy(other.gameObject);
             CurrentColor = "Amarelo";
 
-        }else if (other.tag.Equals("CuboVermelho"))
+        }else if (CurrentColor.Equals("Branco") && other.tag.Equals("CuboVermelho"))
         {
             Color cor = cores[2];
             sprite.GetComponent<Renderer>().material.color = cor;
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             CurrentColor = "Vermelha";
+        }
+        
+        //  Quando for Azul
+
+        if (CurrentColor.Equals("Azul") && other.tag.Equals("CuboAmarelo")
+        || CurrentColor.Equals("Amarelo") && other.tag.Equals("CuboAzul"))
+        {
+            Color cor = cores[4];
+            sprite.GetComponent<Renderer>().material.color = cor;
+            other.gameObject.SetActive(false);
+            //Destroy(other.gameObject);
+            CurrentColor = "Verde";
+
+        }else if (CurrentColor.Equals("Azul") && other.tag.Equals("CuboVermelho")
+        || CurrentColor.Equals("Vermelho") && other.tag.Equals("CuboAzul"))
+        {
+            Color cor = cores[5];
+            sprite.GetComponent<Renderer>().material.color = cor;
+            other.gameObject.SetActive(false);
+            CurrentColor = "Violeta";
+        }
+
+        // QUando for Vermelho
+
+        if (CurrentColor.Equals("Vermelho") && other.tag.Equals("CuboAmarelo")
+        || CurrentColor.Equals("Amarelo") && other.tag.Equals("CuboVermelho"))
+        {
+            Color cor = cores[3];
+            sprite.GetComponent<Renderer>().material.color = cor;
+            other.gameObject.SetActive(false);
+            //Destroy(other.gameObject);
+            CurrentColor = "Laranja";
+
+        }
+
+        // Quando as cores secundarias 
+
+        if (other.tag.Equals("CuboBranco"))
+        {
+            Color cor = cores[6];
+            sprite.GetComponent<Renderer>().material.color = cor;
+            other.gameObject.SetActive(false);
+            CurrentColor = "Branco";
+
+        }
+        if (other.tag.Equals("CuboBranco"))
+        {
+            other.gameObject.SetActive(false);
+        }
+        if (other.tag.Equals("CuboAmarelo"))
+        {
+            other.gameObject.SetActive(false);
+        }
+        if (other.tag.Equals("CuboAzul"))
+        {
+            other.gameObject.SetActive(false);
+        }
+        if (other.tag.Equals("CuboVermelho"))
+        {
+            other.gameObject.SetActive(false);
         }
 
         

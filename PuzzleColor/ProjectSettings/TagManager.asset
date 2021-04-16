@@ -10,6 +10,9 @@ TagManager:
   - ParedeAzul
   - CuboAzul
   - CuboVermelho
+  - CuboBranco
+  - ParedeVerde
+  - Chave
   layers:
   - Default
   - TransparentFX
