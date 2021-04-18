@@ -7,33 +7,24 @@ public class RespawnPointColor : MonoBehaviour
     public float contador;
     public float tempoLimite;
 
-    [SerializeField] GameObject cubo;
-    public GameObject cuboAmarelo;
-    public GameObject cuboBranco;
-    
+    [SerializeField] GameObject[] cubo;
+
+
     void Update()
     {
+        for (int x = 0; x < cubo.Length; x++)
+        {
+            if (cubo[x].activeInHierarchy == false)
+            {
+                contador += Time.deltaTime;
+                if (contador >= tempoLimite)
+                {
+                    cubo[x].SetActive(true);
+                    contador = 0;
+                }
+            }
+        }
+
         
-        if(cubo.activeInHierarchy == false){
-            contador += Time.deltaTime;
-            if(contador >= tempoLimite){
-                cubo.SetActive(true);
-                contador = 0;
-            }
-        }
-        if(cuboAmarelo.activeInHierarchy == false){
-            contador += Time.deltaTime;
-            if(contador >= tempoLimite){
-                cuboAmarelo.SetActive(true);
-                contador = 0;
-            }
-        }
-        if(cuboBranco.activeInHierarchy == false){
-            contador += Time.deltaTime;
-            if(contador >= tempoLimite){
-                cuboBranco.SetActive(true);
-                contador = 0;
-            }
-        }
     }
 }

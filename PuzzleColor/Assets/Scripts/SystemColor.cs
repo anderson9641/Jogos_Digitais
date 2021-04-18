@@ -7,30 +7,33 @@ public class SystemColor : MonoBehaviour
     public Color[] cores;
     private Rigidbody rg;
     private string CurrentColor = "Branco";
-    [SerializeField] GameObject sprite;
+    [SerializeField] GameObject[] sprite;
  
     public void OnTriggerEnter(Collider other)
     {
         if (CurrentColor.Equals("Branco") && other.tag.Equals("CuboAzul"))
         {
-            Color cor = cores[1];
-            sprite.GetComponent<Renderer>().material.color = cor;
+            Color cor = cores[2];
+            sprite[0].GetComponent<Renderer>().material.color = cor;
+            sprite[1].GetComponent<Renderer>().material.color = cor;
             //Destroy(other.gameObject);
             other.gameObject.SetActive(false);
             CurrentColor = "Azul";
 
         }else if (CurrentColor.Equals("Branco") && other.tag.Equals("CuboAmarelo"))
         {
-            Color cor = cores[0];
-            sprite.GetComponent<Renderer>().material.color = cor;
+            Color cor = cores[1];
+            sprite[0].GetComponent<Renderer>().material.color = cor;
+            sprite[1].GetComponent<Renderer>().material.color = cor;
             other.gameObject.SetActive(false);
             //Destroy(other.gameObject);
             CurrentColor = "Amarelo";
 
         }else if (CurrentColor.Equals("Branco") && other.tag.Equals("CuboVermelho"))
         {
-            Color cor = cores[2];
-            sprite.GetComponent<Renderer>().material.color = cor;
+            Color cor = cores[3];
+            sprite[0].GetComponent<Renderer>().material.color = cor;
+            sprite[1].GetComponent<Renderer>().material.color = cor;
             other.gameObject.SetActive(false);
             CurrentColor = "Vermelha";
         }
@@ -41,7 +44,8 @@ public class SystemColor : MonoBehaviour
         || CurrentColor.Equals("Amarelo") && other.tag.Equals("CuboAzul"))
         {
             Color cor = cores[4];
-            sprite.GetComponent<Renderer>().material.color = cor;
+            sprite[0].GetComponent<Renderer>().material.color = cor;
+            sprite[1].GetComponent<Renderer>().material.color = cor;
             other.gameObject.SetActive(false);
             //Destroy(other.gameObject);
             CurrentColor = "Verde";
@@ -50,7 +54,8 @@ public class SystemColor : MonoBehaviour
         || CurrentColor.Equals("Vermelho") && other.tag.Equals("CuboAzul"))
         {
             Color cor = cores[5];
-            sprite.GetComponent<Renderer>().material.color = cor;
+            sprite[0].GetComponent<Renderer>().material.color = cor;
+            sprite[1].GetComponent<Renderer>().material.color = cor;
             other.gameObject.SetActive(false);
             CurrentColor = "Violeta";
         }
@@ -60,8 +65,9 @@ public class SystemColor : MonoBehaviour
         if (CurrentColor.Equals("Vermelho") && other.tag.Equals("CuboAmarelo")
         || CurrentColor.Equals("Amarelo") && other.tag.Equals("CuboVermelho"))
         {
-            Color cor = cores[3];
-            sprite.GetComponent<Renderer>().material.color = cor;
+            Color cor = cores[6];
+            sprite[0].GetComponent<Renderer>().material.color = cor;
+            sprite[1].GetComponent<Renderer>().material.color = cor;
             other.gameObject.SetActive(false);
             //Destroy(other.gameObject);
             CurrentColor = "Laranja";
@@ -72,8 +78,9 @@ public class SystemColor : MonoBehaviour
 
         if (other.tag.Equals("CuboBranco"))
         {
-            Color cor = cores[6];
-            sprite.GetComponent<Renderer>().material.color = cor;
+            Color cor = cores[0];
+            sprite[0].GetComponent<Renderer>().material.color = cor;
+            sprite[1].GetComponent<Renderer>().material.color = cor;
             other.gameObject.SetActive(false);
             CurrentColor = "Branco";
 
@@ -110,6 +117,15 @@ public class SystemColor : MonoBehaviour
             Destroy(other.gameObject);
 
         }else if (other.collider.CompareTag("ParedeVermelha") && CurrentColor.Equals("Vermelha"))
+        {
+            Destroy(other.gameObject);
+        }else if (other.collider.CompareTag("ParedeVerde") && CurrentColor.Equals("Verde"))
+        {
+            Destroy(other.gameObject);
+        }else if (other.collider.CompareTag("ParedeLaranja") && CurrentColor.Equals("Laranja"))
+        {
+            Destroy(other.gameObject);
+        }else if (other.collider.CompareTag("ParedeVioleta") && CurrentColor.Equals("Violeta"))
         {
             Destroy(other.gameObject);
         }

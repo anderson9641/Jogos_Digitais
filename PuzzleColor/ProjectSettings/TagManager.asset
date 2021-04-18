@@ -13,6 +13,8 @@ TagManager:
   - CuboBranco
   - ParedeVerde
   - Chave
+  - ParedeLaranja
+  - ParedeVioleta
   layers:
   - Default
   - TransparentFX
