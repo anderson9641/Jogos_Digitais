@@ -6,7 +6,7 @@ public class SystemColor : MonoBehaviour
 {
     public Color[] cores;
     private Rigidbody rg;
-    private string CurrentColor = "Branco";
+    public string CurrentColor = "Branco";
     [SerializeField] GameObject[] sprite;
  
     public void OnTriggerEnter(Collider other)
@@ -35,7 +35,7 @@ public class SystemColor : MonoBehaviour
             sprite[0].GetComponent<Renderer>().material.color = cor;
             sprite[1].GetComponent<Renderer>().material.color = cor;
             other.gameObject.SetActive(false);
-            CurrentColor = "Vermelha";
+            CurrentColor = "Vermelho";
         }
         
         //  Quando for Azul
@@ -116,7 +116,7 @@ public class SystemColor : MonoBehaviour
             
             Destroy(other.gameObject);
 
-        }else if (other.collider.CompareTag("ParedeVermelha") && CurrentColor.Equals("Vermelha"))
+        }else if (other.collider.CompareTag("ParedeVermelha") && CurrentColor.Equals("Vermelho"))
         {
             Destroy(other.gameObject);
         }else if (other.collider.CompareTag("ParedeVerde") && CurrentColor.Equals("Verde"))
