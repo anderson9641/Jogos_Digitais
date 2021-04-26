@@ -8,9 +8,16 @@ public class SystemColor : MonoBehaviour
     private Rigidbody rg;
     public string CurrentColor = "Branco";
     [SerializeField] GameObject[] sprite;
+    private AudioSource efeito;
+
+    private void Start()
+    {
+        efeito = GetComponent<AudioSource>();    
+    }
  
     public void OnTriggerEnter(Collider other)
     {
+        efeito.Play();
         if (CurrentColor.Equals("Branco") && other.tag.Equals("CuboAzul"))
         {
             Color cor = cores[2];
