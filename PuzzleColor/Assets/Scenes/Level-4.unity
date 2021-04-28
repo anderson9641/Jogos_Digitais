@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: f531e09e2ad2fb440b4eed7605863143, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1685,23 +1685,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7733500618064872521, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.08
+      value: -0.0800016
       objectReference: {fileID: 0}
     - target: {fileID: 7733500618064872521, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.38
+      value: 1.3800001
       objectReference: {fileID: 0}
     - target: {fileID: 7733500618064872521, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.85
+      value: -2.8499987
       objectReference: {fileID: 0}
     - target: {fileID: 7733500618064872521, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.969453
+      value: 0.9832534
       objectReference: {fileID: 0}
     - target: {fileID: 7733500618064872521, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.24527718
+      value: 0.18224396
       objectReference: {fileID: 0}
     - target: {fileID: 7733500618064872521, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1713,7 +1713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7733500618064872521, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 28.396
+      value: 21.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbe71d4cf7482534cb27d333ecac9b0c, type: 3}
