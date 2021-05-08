@@ -1419,6 +1419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: key_gold
       objectReference: {fileID: 0}
+    - target: {fileID: 7516391329543952048, guid: 218060541b0fc2441a0abd5f0423cd06, type: 3}
+      propertyPath: proximoLevel
+      value: Level-6
+      objectReference: {fileID: 0}
     - target: {fileID: 7976152933419866461, guid: 218060541b0fc2441a0abd5f0423cd06, type: 3}
       propertyPath: m_RootOrder
       value: 2

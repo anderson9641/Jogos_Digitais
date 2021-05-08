@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 5161859156453489724}
   - component: {fileID: 8032880788315905913}
   - component: {fileID: 399862502486860866}
-  - component: {fileID: 7516391329543952048}
+  - component: {fileID: 8300878328265963496}
   m_Layer: 0
   m_Name: pPlane3
   m_TagString: Untagged
@@ -240,7 +240,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.103159, y: 6.8772564, z: 1.73}
   m_Center: {x: 0.38, y: 3.06, z: 0}
---- !u!114 &7516391329543952048
+--- !u!114 &8300878328265963496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -249,7 +249,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6711810814156597783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8d1032945665064f89e38f8fbe4d99b, type: 3}
+  m_Script: {fileID: 11500000, guid: ef195ed66e0ec2d4e840ff808b6c8a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proximoLevel: Level-4
+  textoTempo: {fileID: 0}
+  textoScore: {fileID: 0}
+  tempoTotal: 0
+  proximoLevel: 
