@@ -1,0 +1,9 @@
+
+
+Diminuir volume das musicas 
+Pensar a logica do Ranking
+Restaurar a cor após a queda
+mapa do jogo em tela
+extrair o execultavel para apresentação
+elaborar o game over
+quando zerar o tempo tela de continui (botão restart level ou game over)

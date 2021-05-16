@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,8 +7,11 @@ using UnityEngine.SceneManagement;
 public class GamePause : MonoBehaviour
 {
     public GameObject telaDePause;
+
+    public GameObject scriptTemporizador;
     void Update()
     {
+                
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (Time.timeScale == 1)

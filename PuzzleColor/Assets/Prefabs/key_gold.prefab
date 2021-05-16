@@ -46,7 +46,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 06c1a8b11e2544240939b3e207912287, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 5161859156453489724}
   - component: {fileID: 8032880788315905913}
   - component: {fileID: 399862502486860866}
-  - component: {fileID: 8300878328265963496}
+  - component: {fileID: 1710785186}
   m_Layer: 0
   m_Name: pPlane3
   m_TagString: Untagged
@@ -240,7 +240,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.103159, y: 6.8772564, z: 1.73}
   m_Center: {x: 0.38, y: 3.06, z: 0}
---- !u!114 &8300878328265963496
+--- !u!114 &1710785186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -249,10 +249,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 6711810814156597783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef195ed66e0ec2d4e840ff808b6c8a99, type: 3}
+  m_Script: {fileID: 11500000, guid: 07c6037c7ae304d439e565f07401684f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempoTotal: 60
   textoTempo: {fileID: 0}
+  scoreLevel: {fileID: 0}
   textoScore: {fileID: 0}
-  tempoTotal: 0
-  proximoLevel: 
+  textoScoreFinal: {fileID: 0}
+  proximoLevel: Level-1
+  telaDePause: {fileID: 0}
+  telaGameOver: {fileID: 0}
+  telaLevelUp: {fileID: 0}

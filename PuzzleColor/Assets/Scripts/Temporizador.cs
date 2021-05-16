@@ -9,22 +9,31 @@ public class Temporizador : MonoBehaviour
 
     public Text textoTempo;
     public Text textoScore;
+    public Text textoScoreFinal;
+    public Text scoreLevel;
+
+    public GameObject telaGameOver;
+    public GameObject telaLevelUp;
+
     private int scoreGanho;
     int minutos;
     int segundos;
+    public float passa = 0f;
+
     public float tempoTotal;
     private float tempoGasto;
     public string proximoLevel;
-    
+
     private void Start()
     {
+        Time.timeScale = 1;
         tempoGasto = tempoTotal;
         if (proximoLevel == "Level-2")
         {
             PlayerPrefs.SetInt("score", 0);
         }
         else
-        {            
+        {
             scoreGanho = PlayerPrefs.GetInt("score");
             textoScore.text = scoreGanho.ToString("F0");
         }
@@ -46,8 +55,10 @@ public class Temporizador : MonoBehaviour
         }
         if (minutos <= 0 && segundos <= 0)
         {
+            textoScoreFinal.text = scoreGanho.ToString("F0");
             SceneManager.LoadScene("Menu");
         }
+
 
     }
 
@@ -55,11 +66,26 @@ public class Temporizador : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
-            scoreGanho = scoreGanho + ((int)tempoGasto);
+            int tempoLevel = ((int)tempoGasto);
+            scoreGanho = scoreGanho + tempoLevel;
+            scoreLevel.text = tempoLevel.ToString("F0");
+            Cursor.lockState = CursorLockMode.None;
+            telaLevelUp.SetActive(true);
             PlayerPrefs.SetInt("score", scoreGanho);
             textoScore.text = scoreGanho.ToString("F0");
-            SceneManager.LoadScene(proximoLevel);
+            Time.timeScale = 0;
+
         }
     }
 
+    public void levelUp()
+    {
+        telaLevelUp.SetActive(false);
+        SceneManager.LoadScene(proximoLevel);
+
+    }
+
+    public void gameOver(){
+
+    }
 }
